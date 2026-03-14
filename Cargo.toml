@@ -12,6 +12,3 @@ members = ["kernel"]
 
 [dependencies]
 ovmf-prebuilt = "0.1.0-alpha.1"
-
-[net]
-git-fetch-with-cli = true

@@ -1,6 +1,6 @@
 use core::fmt::Write;
 
-use canicula_common::entry::FrameBuffer;
+use bootloader_api::info::FrameBuffer;
 
 use lazy_static::lazy_static;
 use noto_sans_mono_bitmap::FontWeight;
@@ -77,7 +77,7 @@ pub fn _print(args: ::core::fmt::Arguments) {
 #[macro_export]
 macro_rules! print {
     ($($arg:tt)*) => {
-        $crate::arch::x86::console::_print(format_args!($($arg)*));
+        $crate::console::_print(format_args!($($arg)*));
     };
 }
 

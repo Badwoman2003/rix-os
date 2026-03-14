@@ -14,7 +14,7 @@ impl acpi::Handler for AcpiHandler {
     ) -> acpi::PhysicalMapping<Self, T> {
         unsafe {
             let phys_addr = PhysAddr::new(physical_address as u64);
-            let virt_addr = crate::arch::x86::memory::physical_to_virtual(phys_addr);
+            let virt_addr = crate::memory::physical_to_virtual(phys_addr);
             let ptr = NonNull::new(virt_addr.as_mut_ptr()).unwrap();
             PhysicalMapping {
                 physical_start: physical_address,
@@ -259,12 +259,12 @@ impl aml::Handler for AmlHandler {
 }
 
 fn read_addr<T: Copy>(addr: usize) -> T {
-    let virt = unsafe { crate::arch::x86::memory::physical_to_virtual(PhysAddr::new(addr as u64)) };
+    let virt = unsafe { crate::memory::physical_to_virtual(PhysAddr::new(addr as u64)) };
     unsafe { *virt.as_ptr::<T>() }
 }
 
 fn write_addr<T: Copy>(addr: usize, value: T) {
-    let virt = unsafe { crate::arch::x86::memory::physical_to_virtual(PhysAddr::new(addr as u64)) };
+    let virt = unsafe { crate::memory::physical_to_virtual(PhysAddr::new(addr as u64)) };
     unsafe { *virt.as_mut_ptr::<T>() = value };
 }
 

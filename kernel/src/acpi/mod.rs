@@ -74,7 +74,7 @@ pub fn init(rsdp_addr: &u64) {
         // ACPI table header is 36 bytes, AML code starts after it
         const ACPI_TABLE_HEADER_SIZE: usize = 36;
         let table = unsafe {
-            let ptr = crate::arch::x86::memory::physical_to_virtual(PhysAddr::new(
+            let ptr = crate::memory::physical_to_virtual(PhysAddr::new(
                 dsdt.phys_address as u64,
             ));
             // Skip the ACPI table header to get pure AML bytecode
@@ -83,7 +83,7 @@ pub fn init(rsdp_addr: &u64) {
             core::slice::from_raw_parts(aml_start, aml_length)
         };
 
-        let handler = Box::new(crate::arch::x86::acpi::handler::AmlHandler);
+        let handler = Box::new(crate::acpi::handler::AmlHandler);
         let mut aml = AmlContext::new(handler, DebugVerbosity::None);
 
         if let Err(e) = aml.parse_table(table) {

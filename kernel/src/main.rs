@@ -1,13 +1,20 @@
+#![no_std]
+#![no_main]
+#![feature(custom_test_frameworks)]
+#![feature(abi_x86_interrupt)]
+
 use core::panic::PanicInfo;
 
 use bga::{VBE_DISPI_BPP_32, bga_set_bank, bga_set_video_mode};
+use bootloader_api::entry_point;
 use log::*;
 
 use crate::{println, serial_println};
+use bootloader_api::{BootloaderConfig,BootInfo};
 
 mod acpi;
 mod memory;
-mod virtualization;
+//mod virtualization;
 
 mod apic;
 mod bga;
@@ -21,6 +28,7 @@ mod process;
 mod qemu;
 mod scheduler;
 mod serial;
+mod resources;
 
 extern crate alloc;
 
@@ -33,30 +41,39 @@ pub fn panic(info: &PanicInfo) -> ! {
     }
 }
 
-pub fn entry(boot_info: &'static mut canicula_common::entry::BootInfo) -> ! {
-    crate::arch::x86::logging::init();
-    crate::arch::x86::console::init(boot_info.framebuffer.as_mut().unwrap());
+pub static BOOTLOADER_CONFIG: BootloaderConfig = {
+    let mut config = bootloader_api::BootloaderConfig::new_default();
+    config.kernel_stack_size = 512 * 1024;
+    config.mappings.physical_memory = Some(bootloader_api::config::Mapping::Dynamic);
+    config
+};
 
-    crate::arch::x86::gdt::init();
-    crate::arch::x86::interrupts::init();
+entry_point!(kernel_main,config = &BOOTLOADER_CONFIG);
+
+fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
+    crate::logging::init();
+    crate::console::init(boot_info.framebuffer.as_mut().unwrap());
+
+    crate::gdt::init();
+    crate::interrupts::init();
     info!("GDT and IDT initialized");
 
-    let boot_info = crate::arch::x86::memory::init(boot_info);
+    let boot_info = crate::memory::init(boot_info);
     info!("Memory initialized");
 
-    crate::arch::x86::acpi::init(boot_info.rsdp_addr.as_ref().unwrap());
+    crate::acpi::init(boot_info.rsdp_addr.as_ref().unwrap());
     info!("ACPI Initialized");
 
-    crate::arch::x86::apic::init(boot_info.rsdp_addr.as_ref().unwrap());
+    crate::apic::init(boot_info.rsdp_addr.as_ref().unwrap());
     info!("APIC Initialized");
 
-    crate::arch::x86::process::init();
-    crate::arch::x86::scheduler::init();
+    crate::process::init();
+    crate::scheduler::init();
 
-    crate::arch::x86::pcie::init();
+    crate::pcie::init();
     info!("PCIe Initialized");
 
-    crate::arch::x86::interrupts::enable_interrupts();
+    crate::interrupts::enable_interrupts();
     info!("Interrupts enabled");
 
     println!("Hello from the x86_64 kernel!");
@@ -108,12 +125,7 @@ pub fn entry(boot_info: &'static mut canicula_common::entry::BootInfo) -> ! {
     debug!("{:?}", vec);
     debug!("{:?} from the x86_64 kernel alloctor!", hello);
 
-    crate::arch::x86::memory::alloc_test();
-
-    #[cfg(feature = "svm")]
-    crate::arch::x86::virtualization::svm::maybe_init_at_boot();
-    #[cfg(feature = "svm_run")]
-    crate::arch::x86::virtualization::svm::run_test_guest();
+    crate::memory::alloc_test();
 
     loop {
         x86_64::instructions::hlt();

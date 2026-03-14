@@ -1,0 +1,1 @@
+pub static LOGO:&'static [u8] = include_bytes!("../../resources/logo.png");

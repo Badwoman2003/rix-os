@@ -1,0 +1,1950 @@
+warning: /home/badwoman/rust/new-rix/rix-os/Cargo.toml: unused manifest key: net
+help: net is a valid .cargo/config.toml key
+       Fresh core v0.0.0 (/home/badwoman/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core)
+       Fresh compiler_builtins v0.1.160 (/home/badwoman/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins)
+       Fresh alloc v0.0.0 (/home/badwoman/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc)
+       Fresh bit_field v0.10.3
+       Fresh unicode-ident v1.0.24
+       Fresh proc-macro2 v1.0.106
+       Fresh scopeguard v1.2.0
+       Fresh bitflags v2.11.0
+       Fresh lock_api v0.4.14
+       Fresh bitflags v1.3.2
+       Fresh autocfg v1.5.0
+       Fresh tap v1.0.1
+       Fresh adler v1.0.2
+       Fresh log v0.4.29
+       Fresh funty v2.0.0
+       Fresh volatile v0.4.6
+       Fresh cfg-if v1.0.4
+       Fresh conquer-util v0.3.0
+       Fresh byteorder v1.5.0
+       Fresh spin v0.9.8
+       Fresh bit v0.1.1
+       Fresh noto-sans-mono-bitmap v0.3.2
+       Fresh pc-keyboard v0.7.0
+       Fresh quote v1.0.45
+       Fresh rustversion v1.0.22
+       Fresh raw-cpuid v10.7.0
+       Fresh wyz v0.5.1
+       Fresh spinning_top v0.2.5
+       Fresh conquer-once v0.4.0
+       Fresh lazy_static v1.5.0
+       Fresh acpi v5.2.0
+       Fresh spin v0.10.0
+       Fresh syn v1.0.109
+       Fresh const_fn v0.4.12
+       Fresh radium v0.7.0
+   Compiling x86 v0.52.0
+       Fresh paste v1.0.15
+       Fresh crc32fast v1.5.0
+       Fresh linked_list_allocator v0.10.5
+       Fresh bootloader_api v0.11.15
+       Fresh nostd v0.1.6
+       Fresh num_enum_derive v0.5.11
+   Compiling bitvec v1.0.1
+   Compiling miniz_oxide v0.4.4
+       Fresh x86_64 v0.15.4
+     Running `/home/badwoman/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc --crate-name x86 --edition=2018 /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/x86-0.52.0/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("csv", "performance-counter", "phf", "phf_codegen", "serde_json", "unstable", "utest", "vmtest"))' -C metadata=84a553baba1e3671 -C extra-filename=-bae8f861d3934732 --out-dir /home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps --target /home/badwoman/rust/new-rix/rix-os/x86_64-rixOS.json -Zunstable-options -L dependency=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps -L dependency=/home/badwoman/rust/new-rix/rix-os/target/debug/deps --extern 'noprelude:alloc=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/liballoc-c8f6c2ffaba0136b.rmeta' --extern bit_field=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libbit_field-4ffee9539038fe4e.rmeta --extern bitflags=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libbitflags-eedc8d21669d2460.rmeta --extern 'noprelude:compiler_builtins=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libcompiler_builtins-0eafdf6fc5316963.rmeta' --extern 'noprelude:core=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libcore-d0fb7cbdd27f055a.rmeta' --extern raw_cpuid=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libraw_cpuid-53d014b22d1e019b.rmeta -Z unstable-options --cap-lints allow`
+     Running `/home/badwoman/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc --crate-name bitvec --edition=2021 /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/bitvec-1.0.1/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --cfg 'feature="alloc"' --cfg 'feature="atomic"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("alloc", "atomic", "default", "serde", "std", "testing"))' -C metadata=1e6316100064036a -C extra-filename=-a8d3a3e313b63c57 --out-dir /home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps --target /home/badwoman/rust/new-rix/rix-os/x86_64-rixOS.json -Zunstable-options -L dependency=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps -L dependency=/home/badwoman/rust/new-rix/rix-os/target/debug/deps --extern 'noprelude:alloc=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/liballoc-c8f6c2ffaba0136b.rmeta' --extern 'noprelude:compiler_builtins=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libcompiler_builtins-0eafdf6fc5316963.rmeta' --extern 'noprelude:core=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libcore-d0fb7cbdd27f055a.rmeta' --extern funty=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libfunty-e95e39d2c39ee1de.rmeta --extern radium=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libradium-8f16bf0be24b6977.rmeta --extern tap=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libtap-fbfd5b0b274f7651.rmeta --extern wyz=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libwyz-1ef07f8c0eec857a.rmeta -Z unstable-options --cap-lints allow`
+       Fresh num_enum v0.5.11
+   Compiling x2apic v0.5.0
+     Running `/home/badwoman/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc --crate-name miniz_oxide --edition=2018 /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("alloc", "compiler_builtins", "core", "no_extern_crate_alloc", "rustc-dep-of-std"))' -C metadata=461fc70618120d5d -C extra-filename=-4f60d37fb7578e8c --out-dir /home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps --target /home/badwoman/rust/new-rix/rix-os/x86_64-rixOS.json -Zunstable-options -L dependency=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps -L dependency=/home/badwoman/rust/new-rix/rix-os/target/debug/deps --extern adler=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libadler-2138c4acf9ca5d97.rmeta --extern 'noprelude:alloc=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/liballoc-c8f6c2ffaba0136b.rmeta' --extern 'noprelude:compiler_builtins=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libcompiler_builtins-0eafdf6fc5316963.rmeta' --extern 'noprelude:core=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libcore-d0fb7cbdd27f055a.rmeta' -Z unstable-options --cap-lints allow --check-cfg 'cfg(has_alloc)'`
+     Running `/home/badwoman/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc --crate-name x2apic --edition=2018 /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/x2apic-0.5.0/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values())' -C metadata=9e9449e391ae73e7 -C extra-filename=-3c2e3558db755832 --out-dir /home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps --target /home/badwoman/rust/new-rix/rix-os/x86_64-rixOS.json -Zunstable-options -L dependency=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps -L dependency=/home/badwoman/rust/new-rix/rix-os/target/debug/deps --extern 'noprelude:alloc=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/liballoc-c8f6c2ffaba0136b.rmeta' --extern bit=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libbit-602634ccf3b982aa.rmeta --extern bitflags=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libbitflags-eedc8d21669d2460.rmeta --extern 'noprelude:compiler_builtins=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libcompiler_builtins-0eafdf6fc5316963.rmeta' --extern 'noprelude:core=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libcore-d0fb7cbdd27f055a.rmeta' --extern paste=/home/badwoman/rust/new-rix/rix-os/target/debug/deps/libpaste-35f047675a76880e.so --extern raw_cpuid=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libraw_cpuid-53d014b22d1e019b.rmeta --extern x86_64=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libx86_64-ce8af836d60b04cb.rmeta -Z unstable-options --cap-lints allow`
+error[E0463]: can't find crate for `std`
+  |
+  = note: the `x86_64-rixOS` target may not support the standard library
+  = note: `std` is required by `miniz_oxide` because it does not declare `#![no_std]`
+  = help: consider building the standard library from source with `cargo build -Zbuild-std`
+
+error: cannot resolve a prelude import
+
+error[E0463]: can't find crate for `std`
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:32:5
+   |
+32 | use std as alloc;
+   |     ^^^ can't find crate
+   |
+   = note: the `x86_64-rixOS` target may not support the standard library
+   = help: consider building the standard library from source with `cargo build -Zbuild-std`
+
+error: cannot find attribute `derive` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:162:3
+    |
+162 | #[derive(Copy, Clone)]
+    |   ^^^^^^
+    |
+help: consider importing this attribute macro
+    |
+  3 + use core::prelude::rust_2024::derive;
+    |
+
+error: cannot find attribute `derive` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:194:3
+    |
+194 | #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+    |   ^^^^^^
+    |
+help: consider importing this attribute macro
+    |
+  3 + use core::prelude::rust_2024::derive;
+    |
+
+error: cannot find attribute `derive` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:210:3
+    |
+210 | #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+    |   ^^^^^^
+    |
+help: consider importing this attribute macro
+    |
+  3 + use core::prelude::rust_2024::derive;
+    |
+
+error: cannot find attribute `derive` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:250:3
+    |
+250 | #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+    |   ^^^^^^
+    |
+help: consider importing this attribute macro
+    |
+  3 + use core::prelude::rust_2024::derive;
+    |
+
+error: cannot find macro `assert` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:667:9
+    |
+667 |         assert!(bits <= ((1u32 << len) - 1u32));
+    |         ^^^^^^
+    |
+help: consider importing this macro
+    |
+  3 + use core::assert;
+    |
+
+error: cannot find macro `assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1155:13
+     |
+1155 |             assert!(code < MAX_HUFF_SYMBOLS_2);
+     |             ^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::assert;
+     |
+
+error: cannot find macro `assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1226:9
+     |
+1226 |         assert!(end < LZ_DICT_FULL_SIZE);
+     |         ^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::assert;
+     |
+
+error: cannot find macro `debug_assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1522:13
+     |
+1522 |             debug_assert!(huff.code_sizes[0][LEN_SYM[match_len] as usize] != 0);
+     |             ^^^^^^^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::debug_assert;
+     |
+
+error: cannot find macro `debug_assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1540:13
+     |
+1540 |             debug_assert!(huff.code_sizes[1][sym] != 0);
+     |             ^^^^^^^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::debug_assert;
+     |
+
+error: cannot find macro `debug_assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1556:17
+     |
+1556 |                 debug_assert!(huff.code_sizes[0][lit as usize] != 0);
+     |                 ^^^^^^^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::debug_assert;
+     |
+
+error: cannot find macro `assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1620:9
+     |
+1620 |         assert!(d.params.flush_remaining == 0);
+     |         ^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::assert;
+     |
+
+error: cannot find macro `assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1732:5
+     |
+1732 |     assert!(match_len >= MIN_MATCH_LEN.into());
+     |     ^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::assert;
+     |
+
+error: cannot find macro `assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1733:5
+     |
+1733 |     assert!(match_dist >= 1);
+     |     ^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::assert;
+     |
+
+error: cannot find macro `assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1734:5
+     |
+1734 |     assert!(match_dist as usize <= LZ_DICT_SIZE);
+     |     ^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::assert;
+     |
+
+error: cannot find macro `assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1916:9
+     |
+1916 |         assert!(lookahead_size >= len_to_move);
+     |         ^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::assert;
+     |
+
+error: cannot find macro `debug_assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1964:5
+     |
+1964 |     debug_assert!(d.lz.code_position < LZ_CODE_BUF_SIZE - 2);
+     |     ^^^^^^^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::debug_assert;
+     |
+
+error: cannot find macro `debug_assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:2048:25
+     |
+2048 |                         debug_assert!(cur_match_len >= MIN_MATCH_LEN.into());
+     |                         ^^^^^^^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::debug_assert;
+     |
+
+error: cannot find macro `debug_assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:2049:25
+     |
+2049 |                         debug_assert!(cur_match_dist >= 1);
+     |                         ^^^^^^^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::debug_assert;
+     |
+
+error: cannot find macro `debug_assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:2050:25
+     |
+2050 |                         debug_assert!(cur_match_dist as usize <= LZ_DICT_SIZE);
+     |                         ^^^^^^^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::debug_assert;
+     |
+
+error: cannot find macro `debug_assert` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:2099:21
+     |
+2099 |                     debug_assert!(d.lz.code_position < LZ_CODE_BUF_SIZE - 2);
+     |                     ^^^^^^^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::debug_assert;
+     |
+
+error: cannot find attribute `derive` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/mod.rs:15:3
+   |
+15 | #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+   |   ^^^^^^
+   |
+help: consider importing this attribute macro
+   |
+ 3 + use ::core::prelude::rust_2024::derive;
+   |
+
+error: cannot find macro `panic` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/mod.rs:152:18
+    |
+152 |             _ => panic!("Bug! Unexpectedly failed to compress!"),
+    |                  ^^^^^
+    |
+help: consider importing this macro
+    |
+  3 + use ::core::panic;
+    |
+
+error: cannot find attribute `derive` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:217:3
+    |
+217 | #[derive(Copy, Clone, PartialEq, Eq, Debug)]
+    |   ^^^^^^
+    |
+help: consider importing this attribute macro
+    |
+  3 + use ::core::prelude::rust_2024::derive;
+    |
+
+error: cannot find attribute `derive` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:736:3
+    |
+736 | #[derive(Copy, Clone)]
+    |   ^^^^^^
+    |
+help: consider importing this attribute macro
+    |
+  3 + use ::core::prelude::rust_2024::derive;
+    |
+
+error: cannot find macro `unreachable` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:774:14
+    |
+774 |         _ => unreachable!(),
+    |              ^^^^^^^^^^^
+    |
+help: consider importing this macro
+    |
+  3 + use ::core::unreachable;
+    |
+
+error: cannot find macro `debug_assert` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:787:5
+    |
+787 |     debug_assert!(out_pos + match_len <= out_slice.len());
+    |     ^^^^^^^^^^^^
+    |
+help: consider importing this macro
+    |
+  3 + use core::debug_assert;
+    |
+
+error: cannot find macro `cfg` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:799:8
+    |
+799 |     if cfg!(not(any(target_arch = "x86", target_arch = "x86_64"))) {
+    |        ^^^
+    |
+    = note: `cfg` is in scope, but it is an attribute: `#[cfg]`
+help: consider importing this macro
+    |
+  3 + use core::cfg;
+    |
+
+error: cannot find macro `cfg` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:870:24
+    |
+870 |                     if cfg!(not(target_pointer_width = "64")) {
+    |                        ^^^
+    |
+    = note: `cfg` is in scope, but it is an attribute: `#[cfg]`
+help: consider importing this macro
+    |
+  3 + use ::core::cfg;
+    |
+
+error: cannot find macro `cfg` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:931:16
+    |
+931 |             if cfg!(not(target_pointer_width = "64")) {
+    |                ^^^
+    |
+    = note: `cfg` is in scope, but it is an attribute: `#[cfg]`
+help: consider importing this macro
+    |
+  3 + use ::core::cfg;
+    |
+
+error: cannot find macro `unreachable` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:1108:30
+     |
+1108 |                         _ => unreachable!()
+     |                              ^^^^^^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use ::core::unreachable;
+     |
+
+error: cannot find macro `cfg` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:1367:28
+     |
+1367 |                         if cfg!(not(target_pointer_width = "64")) {
+     |                            ^^^
+     |
+     = note: `cfg` is in scope, but it is an attribute: `#[cfg]`
+help: consider importing this macro
+     |
+   3 + use ::core::cfg;
+     |
+
+error: cannot find macro `debug_assert_eq` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:1550:21
+     |
+1550 |                     debug_assert_eq!(l.num_bits, 0);
+     |                     ^^^^^^^^^^^^^^^
+     |
+help: consider importing this macro
+     |
+   3 + use core::debug_assert_eq;
+     |
+
+error: cannot find macro `cfg` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:1626:13
+     |
+1626 |         if !cfg!(fuzzing) {
+     |             ^^^
+     |
+     = note: `cfg` is in scope, but it is an attribute: `#[cfg]`
+help: consider importing this macro
+     |
+   3 + use ::core::cfg;
+     |
+
+error: cannot find attribute `derive` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:24:3
+   |
+24 | #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+   |   ^^^^^^
+   |
+help: consider importing this attribute macro
+   |
+ 3 + use ::core::prelude::rust_2024::derive;
+   |
+
+error: cannot find attribute `derive` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:48:3
+   |
+48 | #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+   |   ^^^^^^
+   |
+help: consider importing this attribute macro
+   |
+31 + use core::prelude::rust_2024::derive;
+   |
+
+error: cannot find attribute `derive` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:86:3
+   |
+86 | #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+   |   ^^^^^^
+   |
+help: consider importing this attribute macro
+   |
+31 + use core::prelude::rust_2024::derive;
+   |
+
+error: cannot find attribute `derive` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:95:3
+   |
+95 | #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+   |   ^^^^^^
+   |
+help: consider importing this attribute macro
+   |
+31 + use core::prelude::rust_2024::derive;
+   |
+
+error: cannot find attribute `derive` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:107:3
+    |
+107 | #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+    |   ^^^^^^
+    |
+help: consider importing this attribute macro
+    |
+ 31 + use core::prelude::rust_2024::derive;
+    |
+
+error: cannot find attribute `derive` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:136:3
+    |
+136 | #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+    |   ^^^^^^
+    |
+help: consider importing this attribute macro
+    |
+ 31 + use core::prelude::rust_2024::derive;
+    |
+
+error[E0405]: cannot find trait `Default` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/buffer.rs:37:6
+   |
+37 | impl Default for HashBuffers {
+   |      ^^^^^^^ not found in this scope
+   |
+help: consider importing this trait
+   |
+ 5 + use core::default::Default;
+   |
+
+error[E0405]: cannot find trait `Default` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/buffer.rs:51:6
+   |
+51 | impl Default for LocalBuf {
+   |      ^^^^^^^ not found in this scope
+   |
+help: consider importing this trait
+   |
+ 5 + use core::default::Default;
+   |
+
+error[E0405]: cannot find trait `From` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:224:6
+    |
+224 | impl From<MZFlush> for TDEFLFlush {
+    |      ^^^^ not found in this scope
+    |
+help: consider importing this trait
+    |
+  3 + use core::convert::From;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:239:18
+    |
+239 |             0 => Ok(TDEFLFlush::None),
+    |                  ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  3 + use crate::MZStatus::Ok;
+    |
+  3 + use core::result::Result::Ok;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:240:18
+    |
+240 |             2 => Ok(TDEFLFlush::Sync),
+    |                  ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  3 + use crate::MZStatus::Ok;
+    |
+  3 + use core::result::Result::Ok;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:241:18
+    |
+241 |             3 => Ok(TDEFLFlush::Full),
+    |                  ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  3 + use crate::MZStatus::Ok;
+    |
+  3 + use core::result::Result::Ok;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:242:18
+    |
+242 |             4 => Ok(TDEFLFlush::Finish),
+    |                  ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  3 + use crate::MZStatus::Ok;
+    |
+  3 + use core::result::Result::Ok;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:243:18
+    |
+243 |             _ => Err(MZError::Param),
+    |                  ^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use core::result::Result::Err;
+    |
+
+error[E0405]: cannot find trait `Copy` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:373:14
+    |
+373 | fn memset<T: Copy>(slice: &mut [T], val: T) {
+    |              ^^^^ not found in this scope
+    |
+help: consider importing this trait
+    |
+  3 + use core::marker::Copy;
+    |
+
+error[E0405]: cannot find trait `Default` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:497:6
+    |
+497 | impl Default for CompressorOxide {
+    |      ^^^^^^^ not found in this scope
+    |
+help: consider importing this trait
+    |
+  3 + use core::default::Default;
+    |
+
+error[E0405]: cannot find trait `FnMut` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:515:35
+    |
+515 |     pub put_buf_func: &'a mut dyn FnMut(&[u8]) -> bool,
+    |                                   ^^^^^ not found in this scope
+    |
+help: consider importing this trait
+    |
+  3 + use core::ops::FnMut;
+    |
+
+error[E0425]: cannot find type `Option` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:604:13
+    |
+604 |     in_buf: Option<&'a [u8]>,
+    |             ^^^^^^ not found in this scope
+    |
+help: consider importing this enum
+    |
+  3 + use core::option::Option;
+    |
+
+error[E0425]: cannot find type `Option` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:605:18
+    |
+605 |     in_buf_size: Option<&'a mut usize>,
+    |                  ^^^^^^ not found in this scope
+    |
+help: consider importing this enum
+    |
+  3 + use core::option::Option;
+    |
+
+error[E0425]: cannot find type `Option` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:606:19
+    |
+606 |     out_buf_size: Option<&'a mut usize>,
+    |                   ^^^^^^ not found in this scope
+    |
+help: consider importing this enum
+    |
+  3 + use core::option::Option;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:613:21
+    |
+613 |             in_buf: Some(in_buf),
+    |                     ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use core::option::Option::Some;
+    |
+
+error[E0425]: cannot find value `None` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:614:26
+    |
+614 |             in_buf_size: None,
+    |                          ^^^^ not found in this scope
+    |
+note: unit variant `crate::inflate::core::Action::None` exists but is inaccessible
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:420:5
+    |
+420 |     None,
+    |     ^^^^ not accessible
+help: consider importing one of these unit variants
+    |
+  3 + use crate::MZFlush::None;
+    |
+  3 + use crate::deflate::TDEFLFlush::None;
+    |
+  3 + use core::option::Option::None;
+    |
+
+error[E0425]: cannot find value `None` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:615:27
+    |
+615 |             out_buf_size: None,
+    |                           ^^^^ not found in this scope
+    |
+note: unit variant `crate::inflate::core::Action::None` exists but is inaccessible
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:420:5
+    |
+420 |     None,
+    |     ^^^^ not accessible
+help: consider importing one of these unit variants
+    |
+  3 + use crate::MZFlush::None;
+    |
+  3 + use crate::deflate::TDEFLFlush::None;
+    |
+  3 + use core::option::Option::None;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:622:21
+    |
+622 |             in_buf: Some(in_buf),
+    |                     ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use core::option::Option::Some;
+    |
+
+error[E0425]: cannot find value `None` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:623:26
+    |
+623 |             in_buf_size: None,
+    |                          ^^^^ not found in this scope
+    |
+note: unit variant `crate::inflate::core::Action::None` exists but is inaccessible
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:420:5
+    |
+420 |     None,
+    |     ^^^^ not accessible
+help: consider importing one of these unit variants
+    |
+  3 + use crate::MZFlush::None;
+    |
+  3 + use crate::deflate::TDEFLFlush::None;
+    |
+  3 + use core::option::Option::None;
+    |
+
+error[E0425]: cannot find value `None` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:624:27
+    |
+624 |             out_buf_size: None,
+    |                           ^^^^ not found in this scope
+    |
+note: unit variant `crate::inflate::core::Action::None` exists but is inaccessible
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:420:5
+    |
+420 |     None,
+    |     ^^^^ not accessible
+help: consider importing one of these unit variants
+    |
+  3 + use crate::MZFlush::None;
+    |
+  3 + use crate::deflate::TDEFLFlush::None;
+    |
+  3 + use core::option::Option::None;
+    |
+
+error[E0425]: cannot find type `Option` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:629:40
+    |
+629 |     fn update_size(&mut self, in_size: Option<usize>, out_size: Option<usize>) {
+    |                                        ^^^^^^ not found in this scope
+    |
+help: consider importing this enum
+    |
+  3 + use core::option::Option;
+    |
+
+error[E0425]: cannot find type `Option` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:629:65
+    |
+629 |     fn update_size(&mut self, in_size: Option<usize>, out_size: Option<usize>) {
+    |                                                                 ^^^^^^ not found in this scope
+    |
+help: consider importing this enum
+    |
+  3 + use core::option::Option;
+    |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:630:17
+    |
+630 |         if let (Some(in_size), Some(size)) = (in_size, self.in_buf_size.as_mut()) {
+    |                 ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use core::option::Option::Some;
+    |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:630:32
+    |
+630 |         if let (Some(in_size), Some(size)) = (in_size, self.in_buf_size.as_mut()) {
+    |                                ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use core::option::Option::Some;
+    |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:634:17
+    |
+634 |         if let (Some(out_size), Some(size)) = (out_size, self.out_buf_size.as_mut()) {
+    |                 ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use core::option::Option::Some;
+    |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:634:33
+    |
+634 |         if let (Some(out_size), Some(size)) = (out_size, self.out_buf_size.as_mut()) {
+    |                                 ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use core::option::Option::Some;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:648:26
+    |
+648 |         self.update_size(Some(params.src_pos), None);
+    |                          ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use core::option::Option::Some;
+    |
+
+error[E0425]: cannot find value `None` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:648:48
+    |
+648 |         self.update_size(Some(params.src_pos), None);
+    |                                                ^^^^ not found in this scope
+    |
+note: unit variant `crate::inflate::core::Action::None` exists but is inaccessible
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:420:5
+    |
+420 |     None,
+    |     ^^^^ not accessible
+help: consider importing one of these unit variants
+    |
+  3 + use crate::MZFlush::None;
+    |
+  3 + use crate::deflate::TDEFLFlush::None;
+    |
+  3 + use core::option::Option::None;
+    |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:729:13
+    |
+729 |             Some(n) if n <= output.inner.len() => output.inner_pos = n,
+    |             ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use core::option::Option::Some;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:730:25
+    |
+730 |             _ => return Err(Error {}),
+    |                         ^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use core::result::Result::Err;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:734:9
+    |
+734 |         Ok(())
+    |         ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  3 + use crate::MZStatus::Ok;
+    |
+  3 + use core::result::Result::Ok;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:788:9
+    |
+788 |         Ok(())
+    |         ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  3 + use crate::MZStatus::Ok;
+    |
+  3 + use core::result::Result::Ok;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:813:9
+    |
+813 |         Ok(())
+    |         ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  3 + use crate::MZStatus::Ok;
+    |
+  3 + use core::result::Result::Ok;
+    |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:819:9
+    |
+819 |         Some(s) => s.copy_from_slice(src),
+    |         ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use core::option::Option::Some;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:820:24
+    |
+820 |         None => return Err(Error {}),
+    |                        ^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use core::result::Result::Err;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:823:5
+    |
+823 |     Ok(())
+    |     ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  3 + use crate::MZStatus::Ok;
+    |
+  3 + use core::result::Result::Ok;
+    |
+
+error[E0405]: cannot find trait `Default` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:826:6
+    |
+826 | impl Default for HuffmanOxide {
+    |      ^^^^^^^ not found in this scope
+    |
+help: consider importing this trait
+    |
+  3 + use core::default::Default;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1169:9
+     |
+1169 |         Ok(())
+     |         ^^ not found in this scope
+     |
+help: consider importing one of these items
+     |
+   3 + use crate::MZStatus::Ok;
+     |
+   3 + use core::result::Result::Ok;
+     |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1586:5
+     |
+1586 |     Ok(true)
+     |     ^^ not found in this scope
+     |
+help: consider importing one of these items
+     |
+   3 + use crate::MZStatus::Ok;
+     |
+   3 + use core::result::Result::Ok;
+     |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1718:5
+     |
+1718 |     Ok(callback.flush_output(saved_buffer, &mut d.params))
+     |     ^^ not found in this scope
+     |
+help: consider importing one of these items
+     |
+   3 + use crate::MZStatus::Ok;
+     |
+   3 + use core::result::Result::Ok;
+     |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1760:9
+     |
+1760 |         Some(in_buf) => in_buf,
+     |         ^^^^ not found in this scope
+     |
+help: consider importing this tuple variant
+     |
+   3 + use core::option::Option::Some;
+     |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:1961:9
+     |
+1961 |         Some(in_buf) => in_buf,
+     |         ^^^^ not found in this scope
+     |
+help: consider importing this tuple variant
+     |
+   3 + use core::option::Option::Some;
+     |
+
+error[E0531]: cannot find tuple struct or tuple variant `Err` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:2088:25
+     |
+2088 |                         Err(_) => {
+     |                         ^^^ not found in this scope
+     |
+help: consider importing this tuple variant
+     |
+   3 + use core::result::Result::Err;
+     |
+
+error[E0531]: cannot find tuple struct or tuple variant `Ok` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:2093:25
+     |
+2093 |                         Ok(status) => status,
+     |                         ^^ not found in this scope
+     |
+help: consider importing this tuple variant
+     |
+   3 + use core::result::Result::Ok;
+     |
+
+error[E0531]: cannot find tuple struct or tuple variant `Err` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:2126:21
+     |
+2126 |                     Err(_) => {
+     |                     ^^^ not found in this scope
+     |
+help: consider importing this tuple variant
+     |
+   3 + use core::result::Result::Err;
+     |
+
+error[E0531]: cannot find tuple struct or tuple variant `Ok` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:2131:21
+     |
+2131 |                     Ok(status) => status,
+     |                     ^^ not found in this scope
+     |
+help: consider importing this tuple variant
+     |
+   3 + use core::result::Result::Ok;
+     |
+
+error[E0405]: cannot find trait `FnMut` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:2205:29
+     |
+2205 |     mut callback_func: impl FnMut(&[u8]) -> bool,
+     |                             ^^^^^ not found in this scope
+     |
+help: consider importing this trait
+     |
+   3 + use core::ops::FnMut;
+     |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:2264:12
+     |
+2264 |     if let Some(in_buf) = callback.in_buf {
+     |            ^^^^ not found in this scope
+     |
+help: consider importing this tuple variant
+     |
+   3 + use core::option::Option::Some;
+     |
+
+error[E0531]: cannot find tuple struct or tuple variant `Err` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:2276:13
+     |
+2276 |             Err(_) => {
+     |             ^^^ not found in this scope
+     |
+help: consider importing this tuple variant
+     |
+   3 + use core::result::Result::Err;
+     |
+
+error[E0531]: cannot find tuple struct or tuple variant `Ok` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:2284:13
+     |
+2284 |             Ok(x) if x < 0 => {
+     |             ^^ not found in this scope
+     |
+help: consider importing this tuple variant
+     |
+   3 + use core::result::Result::Ok;
+     |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/stream.rs:35:25
+   |
+35 |                 status: Ok(MZStatus::StreamEnd),
+   |                         ^^ not found in this scope
+   |
+help: consider importing one of these items
+   |
+ 6 + use crate::MZStatus::Ok;
+   |
+ 6 + use core::result::Result::Ok;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/stream.rs:65:44
+   |
+65 |             TDEFLStatus::BadParam => break Err(MZError::Param),
+   |                                            ^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+ 6 + use core::result::Result::Err;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/stream.rs:67:48
+   |
+67 |             TDEFLStatus::PutBufFailed => break Err(MZError::Stream),
+   |                                                ^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+ 6 + use core::result::Result::Err;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/stream.rs:68:40
+   |
+68 |             TDEFLStatus::Done => break Ok(MZStatus::StreamEnd),
+   |                                        ^^ not found in this scope
+   |
+help: consider importing one of these items
+   |
+ 6 + use crate::MZStatus::Ok;
+   |
+ 6 + use core::result::Result::Ok;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/stream.rs:74:19
+   |
+74 |             break Ok(MZStatus::Ok);
+   |                   ^^ not found in this scope
+   |
+help: consider importing one of these items
+   |
+ 6 + use crate::MZStatus::Ok;
+   |
+ 6 + use core::result::Result::Ok;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/stream.rs:82:17
+   |
+82 |                 Ok(MZStatus::Ok)
+   |                 ^^ not found in this scope
+   |
+help: consider importing one of these items
+   |
+ 6 + use crate::MZStatus::Ok;
+   |
+ 6 + use core::result::Result::Ok;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/stream.rs:86:17
+   |
+86 |                 Err(MZError::Buf)
+   |                 ^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+ 6 + use core::result::Result::Err;
+   |
+
+error[E0425]: cannot find type `Option` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:72:45
+    |
+ 72 |     fn lookup(&self, bit_buf: BitBuffer) -> Option<(i32, u32)> {
+    |                                             ^^^^^^
+...
+419 | enum Action {
+    | ----------- similarly named enum `Action` defined here
+    |
+help: an enum with a similar name exists
+    |
+ 72 -     fn lookup(&self, bit_buf: BitBuffer) -> Option<(i32, u32)> {
+ 72 +     fn lookup(&self, bit_buf: BitBuffer) -> Action<(i32, u32)> {
+    |
+help: consider importing this enum
+    |
+  3 + use ::core::option::Option;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:76:17
+   |
+76 |                 Some((symbol, (symbol >> 9) as u32))
+   |                 ^^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+ 3 + use ::core::option::Option::Some;
+   |
+
+error[E0425]: cannot find value `None` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:79:17
+   |
+79 |                 None
+   |                 ^^^^ not found in this scope
+   |
+help: consider importing one of these unit variants
+   |
+ 3 + use crate::MZFlush::None;
+   |
+ 3 + use crate::deflate::core::TDEFLFlush::None;
+   |
+ 3 + use crate::inflate::core::Action::None;
+   |
+ 3 + use ::core::option::Option::None;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:83:13
+   |
+83 |             Some(self.tree_lookup(symbol, bit_buf, FAST_LOOKUP_BITS.into()))
+   |             ^^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+ 3 + use ::core::option::Option::Some;
+   |
+
+error[E0425]: cannot find type `Option` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:178:30
+    |
+178 |     pub fn adler32(&self) -> Option<u32> {
+    |                              ^^^^^^
+...
+419 | enum Action {
+    | ----------- similarly named enum `Action` defined here
+    |
+help: an enum with a similar name exists
+    |
+178 -     pub fn adler32(&self) -> Option<u32> {
+178 +     pub fn adler32(&self) -> Action<u32> {
+    |
+help: consider importing this enum
+    |
+  3 + use ::core::option::Option;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:180:13
+    |
+180 |             Some(self.check_adler32)
+    |             ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use ::core::option::Option::Some;
+    |
+
+error[E0425]: cannot find value `None` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:182:13
+    |
+182 |             None
+    |             ^^^^ not found in this scope
+    |
+help: consider importing one of these unit variants
+    |
+  3 + use crate::MZFlush::None;
+    |
+  3 + use crate::deflate::core::TDEFLFlush::None;
+    |
+  3 + use crate::inflate::core::Action::None;
+    |
+  3 + use ::core::option::Option::None;
+    |
+
+error[E0405]: cannot find trait `Default` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:187:6
+    |
+187 | impl Default for DecompressorOxide {
+    |      ^^^^^^^ not found in this scope
+    |
+help: consider importing this trait
+    |
+  3 + use ::core::default::Default;
+    |
+
+error[E0405]: cannot find trait `Copy` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:326:14
+    |
+326 | fn memset<T: Copy>(slice: &mut [T], val: T) {
+    |              ^^^^ not found in this scope
+    |
+help: consider importing this trait
+    |
+  3 + use ::core::marker::Copy;
+    |
+
+error[E0405]: cannot find trait `FnOnce` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:440:8
+    |
+440 |     F: FnOnce(&mut DecompressorOxide, &mut LocalVars, i32) -> Action,
+    |        ^^^^^^ not found in this scope
+    |
+help: consider importing this trait
+    |
+  3 + use ::core::ops::FnOnce;
+    |
+
+error[E0405]: cannot find trait `FnOnce` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:546:8
+    |
+546 |     F: FnOnce(u8) -> Action,
+    |        ^^^^^^ not found in this scope
+    |
+help: consider importing this trait
+    |
+  3 + use ::core::ops::FnOnce;
+    |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:550:9
+    |
+550 |         Some(&byte) => f(byte),
+    |         ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use ::core::option::Option::Some;
+    |
+
+error[E0405]: cannot find trait `FnOnce` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:568:8
+    |
+568 |     F: FnOnce(&mut LocalVars, BitBuffer) -> Action,
+    |        ^^^^^^ not found in this scope
+    |
+help: consider importing this trait
+    |
+  3 + use ::core::ops::FnOnce;
+    |
+
+error[E0405]: cannot find trait `FnOnce` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:594:8
+    |
+594 |     F: FnOnce(&mut LocalVars) -> Action,
+    |        ^^^^^^ not found in this scope
+    |
+help: consider importing this trait
+    |
+  3 + use ::core::ops::FnOnce;
+    |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:859:20
+    |
+859 |             if let Some((symbol, code_len)) = r.tables[LITLEN_TABLE].lookup(l.bit_buf) {
+    |                    ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use ::core::option::Option::Some;
+    |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:874:28
+    |
+874 |                     if let Some((symbol, code_len)) = r.tables[LITLEN_TABLE].lookup(l.bit_buf) {
+    |                            ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use ::core::option::Option::Some;
+    |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:935:20
+    |
+935 |             if let Some((mut symbol, code_len)) = r.tables[DIST_TABLE].lookup(l.bit_buf) {
+    |                    ^^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use ::core::option::Option::Some;
+    |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:1355:28
+     |
+1355 |                     if let Some((symbol, code_len)) = r.tables[LITLEN_TABLE].lookup(l.bit_buf) {
+     |                            ^^^^ not found in this scope
+     |
+help: consider importing this tuple variant
+     |
+   3 + use ::core::option::Option::Some;
+     |
+
+error[E0531]: cannot find tuple struct or tuple variant `Some` in this scope
+    --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:1371:32
+     |
+1371 |                         if let Some((symbol, code_len)) = r.tables[LITLEN_TABLE].lookup(l.bit_buf) {
+     |                                ^^^^ not found in this scope
+     |
+help: consider importing this tuple variant
+     |
+   3 + use ::core::option::Option::Some;
+     |
+
+error[E0405]: cannot find trait `Default` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/stream.rs:83:6
+   |
+83 | impl Default for InflateState {
+   |      ^^^^^^^ not found in this scope
+   |
+help: consider importing this trait
+   |
+ 4 + use core::default::Default;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/stream.rs:213:17
+    |
+213 |                 Err(MZError::Data)
+    |                 ^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  4 + use core::result::Result::Err;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/stream.rs:216:17
+    |
+216 |                 Err(MZError::Buf)
+    |                 ^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  4 + use core::result::Result::Err;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/stream.rs:218:17
+    |
+218 |                 Ok(MZStatus::StreamEnd)
+    |                 ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  4 + use crate::MZStatus::Ok;
+    |
+  4 + use core::result::Result::Ok;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/stream.rs:237:21
+    |
+237 |             status: Ok(
+    |                     ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  4 + use crate::MZStatus::Ok;
+    |
+  4 + use core::result::Result::Ok;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/stream.rs:296:20
+    |
+296 |             return Err(MZError::Data);
+    |                    ^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  4 + use core::result::Result::Err;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/stream.rs:302:20
+    |
+302 |             return Err(MZError::Buf);
+    |                    ^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  4 + use core::result::Result::Err;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/stream.rs:310:21
+    |
+310 |                     Err(MZError::Buf)
+    |                     ^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  4 + use core::result::Result::Err;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/stream.rs:312:21
+    |
+312 |                     Ok(MZStatus::StreamEnd)
+    |                     ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  4 + use crate::MZStatus::Ok;
+    |
+  4 + use core::result::Result::Ok;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/stream.rs:316:24
+    |
+316 |                 return Err(MZError::Buf);
+    |                        ^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  4 + use core::result::Result::Err;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/stream.rs:324:21
+    |
+324 |                     Ok(MZStatus::StreamEnd)
+    |                     ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  4 + use crate::MZStatus::Ok;
+    |
+  4 + use core::result::Result::Ok;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/stream.rs:327:21
+    |
+327 |                     Ok(MZStatus::Ok)
+    |                     ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  4 + use crate::MZStatus::Ok;
+    |
+  4 + use core::result::Result::Ok;
+    |
+
+error[E0425]: cannot find type `Option` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:45:36
+   |
+45 |     pub fn from_i32(value: i32) -> Option<TINFLStatus> {
+   |                                    ^^^^^^ not found in this scope
+   |
+help: consider importing this enum
+   |
+ 3 + use ::core::option::Option;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:48:57
+   |
+48 |             TINFL_STATUS_FAILED_CANNOT_MAKE_PROGRESS => Some(FailedCannotMakeProgress),
+   |                                                         ^^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+ 3 + use core::option::Option::Some;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:49:39
+   |
+49 |             TINFL_STATUS_BAD_PARAM => Some(BadParam),
+   |                                       ^^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+ 3 + use core::option::Option::Some;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:50:46
+   |
+50 |             TINFL_STATUS_ADLER32_MISMATCH => Some(Adler32Mismatch),
+   |                                              ^^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+ 3 + use core::option::Option::Some;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:51:36
+   |
+51 |             TINFL_STATUS_FAILED => Some(Failed),
+   |                                    ^^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+ 3 + use core::option::Option::Some;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:52:34
+   |
+52 |             TINFL_STATUS_DONE => Some(Done),
+   |                                  ^^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+ 3 + use core::option::Option::Some;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:53:46
+   |
+53 |             TINFL_STATUS_NEEDS_MORE_INPUT => Some(NeedsMoreInput),
+   |                                              ^^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+ 3 + use core::option::Option::Some;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Some` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:54:45
+   |
+54 |             TINFL_STATUS_HAS_MORE_OUTPUT => Some(HasMoreOutput),
+   |                                             ^^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+ 3 + use core::option::Option::Some;
+   |
+
+error[E0425]: cannot find value `None` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:55:18
+    |
+ 37 |     Done = TINFL_STATUS_DONE as i8,
+    |     ------------------------------ similarly named unit variant `Done` defined here
+...
+ 55 |             _ => None,
+    |                  ^^^^
+    |
+note: unit variant `crate::inflate::core::Action::None` exists but is inaccessible
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/core.rs:420:5
+    |
+420 |     None,
+    |     ^^^^ not accessible
+help: a unit variant with a similar name exists
+    |
+ 55 -             _ => None,
+ 55 +             _ => Done,
+    |
+help: consider importing one of these unit variants
+    |
+  3 + use crate::MZFlush::None;
+    |
+  3 + use crate::deflate::core::TDEFLFlush::None;
+    |
+  3 + use core::option::Option::None;
+    |
+
+error[E0425]: cannot find type `Result` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:64:43
+   |
+64 | pub fn decompress_to_vec(input: &[u8]) -> Result<Vec<u8>, TINFLStatus> {
+   |                                           ^^^^^^ not found in this scope
+   |
+note: type alias `crate::deflate::core::Result` exists but is inaccessible
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:19:1
+   |
+19 | type Result<T, E = Error> = core::result::Result<T, E>;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not accessible
+help: consider importing one of these items
+   |
+ 3 + use ::core::fmt::Result;
+   |
+ 3 + use ::core::result::Result;
+   |
+
+error[E0425]: cannot find type `Result` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:72:48
+   |
+72 | pub fn decompress_to_vec_zlib(input: &[u8]) -> Result<Vec<u8>, TINFLStatus> {
+   |                                                ^^^^^^ not found in this scope
+   |
+note: type alias `crate::deflate::core::Result` exists but is inaccessible
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:19:1
+   |
+19 | type Result<T, E = Error> = core::result::Result<T, E>;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not accessible
+help: consider importing one of these items
+   |
+ 3 + use ::core::fmt::Result;
+   |
+ 3 + use ::core::result::Result;
+   |
+
+error[E0425]: cannot find type `Result` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:86:71
+   |
+86 | pub fn decompress_to_vec_with_limit(input: &[u8], max_size: usize) -> Result<Vec<u8>, TINFLStatus> {
+   |                                                                       ^^^^^^ not found in this scope
+   |
+note: type alias `crate::deflate::core::Result` exists but is inaccessible
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:19:1
+   |
+19 | type Result<T, E = Error> = core::result::Result<T, E>;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not accessible
+help: consider importing one of these items
+   |
+ 3 + use ::core::fmt::Result;
+   |
+ 3 + use ::core::result::Result;
+   |
+
+error[E0425]: cannot find type `Result` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:99:6
+   |
+99 | ) -> Result<Vec<u8>, TINFLStatus> {
+   |      ^^^^^^ not found in this scope
+   |
+note: type alias `crate::deflate::core::Result` exists but is inaccessible
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:19:1
+   |
+19 | type Result<T, E = Error> = core::result::Result<T, E>;
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not accessible
+help: consider importing one of these items
+   |
+ 3 + use ::core::fmt::Result;
+   |
+ 3 + use ::core::result::Result;
+   |
+
+error[E0425]: cannot find type `Result` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:107:6
+    |
+107 | ) -> Result<Vec<u8>, TINFLStatus> {
+    |      ^^^^^^ not found in this scope
+    |
+note: type alias `crate::deflate::core::Result` exists but is inaccessible
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:19:1
+    |
+ 19 | type Result<T, E = Error> = core::result::Result<T, E>;
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not accessible
+help: consider importing one of these items
+    |
+  3 + use ::core::fmt::Result;
+    |
+  3 + use ::core::result::Result;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:126:24
+    |
+126 |                 return Ok(ret);
+    |                        ^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+  3 + use crate::MZStatus::Ok;
+    |
+  3 + use ::core::result::Result::Ok;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:136:28
+    |
+136 |                     return Err(TINFLStatus::HasMoreOutput);
+    |                            ^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use ::core::result::Result::Err;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/inflate/mod.rs:141:25
+    |
+141 |             _ => return Err(status),
+    |                         ^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+  3 + use ::core::result::Result::Err;
+    |
+
+error[E0425]: cannot find type `Result` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:73:31
+    |
+ 73 |     pub fn new(flush: i32) -> Result<Self, MZError> {
+    |                               ^^^^^^
+...
+133 | pub type MZResult = Result<MZStatus, MZError>;
+    | ---------------------------------------------- similarly named type alias `MZResult` defined here
+    |
+note: type alias `crate::deflate::core::Result` exists but is inaccessible
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:19:1
+    |
+ 19 | type Result<T, E = Error> = core::result::Result<T, E>;
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not accessible
+help: a type alias with a similar name exists
+    |
+ 73 |     pub fn new(flush: i32) -> MZResult<Self, MZError> {
+    |                               ++
+help: consider importing one of these items
+    |
+ 31 + use core::fmt::Result;
+    |
+ 31 + use core::result::Result;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:75:18
+   |
+75 |             0 => Ok(MZFlush::None),
+   |                  ^^ not found in this scope
+   |
+help: consider importing one of these items
+   |
+31 + use crate::MZStatus::Ok;
+   |
+31 + use core::result::Result::Ok;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:76:22
+   |
+76 |             1 | 2 => Ok(MZFlush::Sync),
+   |                      ^^ not found in this scope
+   |
+help: consider importing one of these items
+   |
+31 + use crate::MZStatus::Ok;
+   |
+31 + use core::result::Result::Ok;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:77:18
+   |
+77 |             3 => Ok(MZFlush::Full),
+   |                  ^^ not found in this scope
+   |
+help: consider importing one of these items
+   |
+31 + use crate::MZStatus::Ok;
+   |
+31 + use core::result::Result::Ok;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Ok` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:78:18
+   |
+78 |             4 => Ok(MZFlush::Finish),
+   |                  ^^ not found in this scope
+   |
+help: consider importing one of these items
+   |
+31 + use crate::MZStatus::Ok;
+   |
+31 + use core::result::Result::Ok;
+   |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+  --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:79:18
+   |
+79 |             _ => Err(MZError::Param),
+   |                  ^^^ not found in this scope
+   |
+help: consider importing this tuple variant
+   |
+31 + use core::result::Result::Err;
+   |
+
+error[E0425]: cannot find type `Result` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:133:21
+    |
+133 | pub type MZResult = Result<MZStatus, MZError>;
+    |                     ^^^^^^ not found in this scope
+    |
+note: type alias `crate::deflate::core::Result` exists but is inaccessible
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/deflate/core.rs:19:1
+    |
+ 19 | type Result<T, E = Error> = core::result::Result<T, E>;
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not accessible
+help: consider importing one of these items
+    |
+ 31 + use core::fmt::Result;
+    |
+ 31 + use core::result::Result;
+    |
+
+error[E0425]: cannot find function, tuple struct or tuple variant `Err` in this scope
+   --> /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs:152:21
+    |
+152 |             status: Err(error),
+    |                     ^^^ not found in this scope
+    |
+help: consider importing this tuple variant
+    |
+ 31 + use core::result::Result::Err;
+    |
+
+Some errors have detailed explanations: E0405, E0425, E0463, E0531.
+For more information about an error, try `rustc --explain E0405`.
+error: could not compile `miniz_oxide` (lib) due to 155 previous errors
+
+Caused by:
+  process didn't exit successfully: `/home/badwoman/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc --crate-name miniz_oxide --edition=2018 /home/badwoman/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/miniz_oxide-0.4.4/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C embed-bitcode=no -C debuginfo=2 --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("alloc", "compiler_builtins", "core", "no_extern_crate_alloc", "rustc-dep-of-std"))' -C metadata=461fc70618120d5d -C extra-filename=-4f60d37fb7578e8c --out-dir /home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps --target /home/badwoman/rust/new-rix/rix-os/x86_64-rixOS.json -Zunstable-options -L dependency=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps -L dependency=/home/badwoman/rust/new-rix/rix-os/target/debug/deps --extern adler=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libadler-2138c4acf9ca5d97.rmeta --extern 'noprelude:alloc=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/liballoc-c8f6c2ffaba0136b.rmeta' --extern 'noprelude:compiler_builtins=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libcompiler_builtins-0eafdf6fc5316963.rmeta' --extern 'noprelude:core=/home/badwoman/rust/new-rix/rix-os/target/x86_64-rixOS/debug/deps/libcore-d0fb7cbdd27f055a.rmeta' -Z unstable-options --cap-lints allow --check-cfg 'cfg(has_alloc)'` (exit status: 1)
+warning: build failed, waiting for other jobs to finish...

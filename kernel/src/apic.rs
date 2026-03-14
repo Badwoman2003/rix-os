@@ -32,7 +32,7 @@ impl IOApic {
     pub fn new(addr: u64) -> Self {
         Self {
             addr: unsafe {
-                crate::arch::x86::memory::physical_to_virtual(PhysAddr::new(addr)).as_u64()
+                crate::memory::physical_to_virtual(PhysAddr::new(addr)).as_u64()
             },
             ioapic: None,
         }
@@ -69,7 +69,7 @@ impl LApic {
     pub fn new(addr: u64) -> Self {
         Self {
             addr: unsafe {
-                crate::arch::x86::memory::physical_to_virtual(PhysAddr::new(addr)).as_u64()
+                crate::memory::physical_to_virtual(PhysAddr::new(addr)).as_u64()
             },
             lapic: None,
         }
@@ -145,7 +145,7 @@ pub fn init_ioapic(ioapic_addr: u64) {
 }
 
 pub fn init(rsdp_addr: &u64) {
-    let handler = crate::arch::x86::acpi::handler::AcpiHandler;
+    let handler = crate::acpi::handler::AcpiHandler;
     let tables = unsafe { AcpiTables::from_rsdp(handler, *rsdp_addr as usize).unwrap() };
     let platform = AcpiPlatform::new(tables, handler).unwrap();
     let interrupt_model = platform.interrupt_model;

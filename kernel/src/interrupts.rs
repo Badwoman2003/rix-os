@@ -120,7 +120,7 @@ lazy_static! {
         unsafe {
             idt.double_fault
                 .set_handler_fn(double_fault_handler)
-                .set_stack_index(crate::arch::x86::gdt::DOUBLE_FAULT_IST_INDEX);
+                .set_stack_index(crate::gdt::DOUBLE_FAULT_IST_INDEX);
         }
 
         #[rustfmt::skip]
@@ -183,7 +183,7 @@ pub extern "x86-interrupt" fn breakpoint_handler(stack_frame: InterruptStackFram
 }
 
 pub extern "x86-interrupt" fn timer_interrupt_handler(_stack_frame: InterruptStackFrame) {
-    use crate::arch::x86::apic::LAPIC;
+    use crate::apic::LAPIC;
 
     // EOI must be sent before context_switch, because the switch may not
     // return to this handler until this task is scheduled again.
@@ -192,20 +192,20 @@ pub extern "x86-interrupt" fn timer_interrupt_handler(_stack_frame: InterruptSta
         LAPIC.get().unwrap().lock().end_interrupts();
     }
 
-    crate::arch::x86::scheduler::tick();
+    crate::scheduler::tick();
 }
 
 pub extern "x86-interrupt" fn keyboard_interrupt_handler(_stack_frame: InterruptStackFrame) {
     use x86_64::instructions::port::Port;
 
-    use crate::arch::x86::apic::LAPIC;
+    use crate::apic::LAPIC;
 
     let mut port = Port::new(0x60);
     let scancode: u8 = unsafe { port.read() };
 
     warn!("Keyboard scancode: {}", scancode);
     if scancode == 28 {
-        crate::arch::x86::acpi::shutdown();
+        crate::acpi::shutdown();
     }
 
     unsafe {
@@ -215,7 +215,7 @@ pub extern "x86-interrupt" fn keyboard_interrupt_handler(_stack_frame: Interrupt
 }
 
 pub extern "x86-interrupt" fn lapic_error_handler(_stack_frame: InterruptStackFrame) {
-    use crate::arch::x86::apic::LAPIC;
+    use crate::apic::LAPIC;
 
     warn!("LAPIC ERROR interrupt received");
 
