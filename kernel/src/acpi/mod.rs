@@ -30,7 +30,7 @@ lazy_static! {
 pub fn init(rsdp_addr: &u64) {
     let tables = match unsafe {
         AcpiTables::from_rsdp(
-            crate::arch::x86::acpi::handler::AcpiHandler,
+            crate::acpi::handler::AcpiHandler,
             *rsdp_addr as usize,
         )
     } {
