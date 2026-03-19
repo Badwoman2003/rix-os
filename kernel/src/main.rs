@@ -2,6 +2,7 @@
 #![no_main]
 #![feature(custom_test_frameworks)]
 #![feature(abi_x86_interrupt)]
+#![feature(alloc_error_handler)]
 
 use core::panic::PanicInfo;
 
@@ -9,7 +10,7 @@ use bga::{VBE_DISPI_BPP_32, bga_set_bank, bga_set_video_mode};
 use bootloader_api::entry_point;
 use log::*;
 
-use crate::{println, serial_println};
+///use crate::{println, serial_println};
 use bootloader_api::{BootloaderConfig,BootInfo};
 
 mod acpi;
@@ -51,7 +52,7 @@ pub static BOOTLOADER_CONFIG: BootloaderConfig = {
 entry_point!(kernel_main,config = &BOOTLOADER_CONFIG);
 
 fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
-    crate::logging::init();
+    //crate::logging::init();
     crate::console::init(boot_info.framebuffer.as_mut().unwrap());
 
     crate::gdt::init();
@@ -64,11 +65,8 @@ fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
     crate::acpi::init(boot_info.rsdp_addr.as_ref().unwrap());
     info!("ACPI Initialized");
 
-    crate::apic::init(boot_info.rsdp_addr.as_ref().unwrap());
-    info!("APIC Initialized");
-
-    crate::process::init();
-    crate::scheduler::init();
+    //crate::process::init();
+    //crate::scheduler::init();
 
     crate::pcie::init();
     info!("PCIe Initialized");
@@ -118,14 +116,6 @@ fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
             }
         }
     }
-
-    let vec = alloc::vec![1, 1, 4, 5, 1, 4];
-    let hello = alloc::string::String::from("Hello");
-
-    debug!("{:?}", vec);
-    debug!("{:?} from the x86_64 kernel alloctor!", hello);
-
-    crate::memory::alloc_test();
 
     loop {
         x86_64::instructions::hlt();
