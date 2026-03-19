@@ -3,6 +3,10 @@ name = "kernel"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "kernel"
+path = "src/main.rs"
+
 [dependencies]
 log = "0.4.27"
 spin = "0.10.0"
