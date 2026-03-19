@@ -1,4 +1,4 @@
-use canicula_common::entry::{MemoryRegionKind, MemoryRegions};
+use bootloader_api::info::{MemoryRegionKind, MemoryRegions};
 use log::debug;
 use x86_64::registers::control::Cr3;
 use x86_64::structures::paging::{FrameAllocator, OffsetPageTable, PageTable, PhysFrame, Size4KiB};
@@ -48,15 +48,16 @@ pub unsafe fn active_level_4_table(physical_memory_offset: VirtAddr) -> &'static
 }
 
 pub fn init(
-    boot_info: &'static mut canicula_common::entry::BootInfo,
+    boot_info: &'static mut bootloader_api::info::BootInfo,
 ) -> (
     OffsetPageTable<'static>,
     AbyssFrameAllocator,
-    &'static canicula_common::entry::BootInfo,
+    &'static bootloader_api::info::BootInfo,
 ) {
     debug!("boot info {:#?}", boot_info);
 
-    let physical_memory_offset = VirtAddr::new(boot_info.physical_memory_offset.unwrap());
+    let phy_addr:bootloader_api::info::Optional<u64> = boot_info.physical_memory_offset;
+    let physical_memory_offset = VirtAddr::new(phy_addr.into_option().unwrap());
 
     let l4_table = unsafe { active_level_4_table(physical_memory_offset) };
 

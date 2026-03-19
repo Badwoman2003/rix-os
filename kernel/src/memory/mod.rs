@@ -67,7 +67,7 @@ pub fn init(
 ) -> &'static bootloader_api::info::BootInfo {
     let physical_memory_offset = VirtAddr::new(
         boot_info
-            .physical_memory_offset
+            .physical_memory_offset.into_option()
             .expect("Physical memory offset not found"),
     );
 
