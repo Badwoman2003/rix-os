@@ -1,12 +1,9 @@
 [unstable]
-build-std = ["core", "compiler_builtins", "alloc"]
-build-std-features = ["compiler-builtins-mem"]
+
 bindeps = true
 json-target-spec = true
 unstable-options = true
 
-[build]
-target = "x86_64-rixOS.json"
 
 [target.'cfg(target_os = "none")']
 runner = "bootimage runner"
