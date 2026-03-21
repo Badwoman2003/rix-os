@@ -1,12 +1,10 @@
 [unstable]
-
-bindeps = true
-json-target-spec = true
+bindeps = true  # 允许build.rs使用kernel编译好的二进制文件
+json-target-spec = true # 允许使用.json文件自定义target
 unstable-options = true
 
-
 [target.'cfg(target_os = "none")']
-runner = "bootimage runner"
+runner = "bootimage runner" # 使用cargo run时调用bootimage启动qemu
 
 [source.crates-io]
 replace-with = 'ustc'

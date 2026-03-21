@@ -1,5 +1,6 @@
 #![no_std]
 #![no_main]
+#![panic_handler]
 #![feature(custom_test_frameworks)]
 #![feature(abi_x86_interrupt)]
 #![feature(alloc_error_handler)]
@@ -32,15 +33,6 @@ mod serial;
 mod resources;
 
 extern crate alloc;
-
-#[panic_handler]
-pub fn panic(info: &PanicInfo) -> ! {
-    error!("PANIC: {:#?}", info);
-
-    loop {
-        x86_64::instructions::hlt();
-    }
-}
 
 pub static BOOTLOADER_CONFIG: BootloaderConfig = {
     let mut config = bootloader_api::BootloaderConfig::new_default();
@@ -108,10 +100,14 @@ fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
                 let b = pixel[2];
                 let a = pixel[3];
                 let color = ((r as u32) << 16) | ((g as u32) << 8) | (b as u32);
+                let pitch = img_width * 4;
+                let offset = y*pitch/4+x;
                 if a > 0 {
-                    *framebuffer.add(dst_offset) = color;
+                    //*framebuffer.add(dst_offset) = color;
+                    *framebuffer.offset(offset as isize) = color;
                 } else {
-                    *framebuffer.add(dst_offset) = 0x00000000;
+                    //*framebuffer.add(dst_offset) = 0x00000000;
+                    *framebuffer.offset(src_index as isize) = 0x00000000;
                 }
             }
         }
@@ -120,4 +116,16 @@ fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
     loop {
         x86_64::instructions::hlt();
     }
+}
+
+#[cfg(not(test))]
+#[panic_handler]
+fn panic(info: &PanicInfo) -> ! {
+    kernel::test_panic_handler(info)
+}
+
+#[cfg(test)]
+#[panic_handler]
+fn panic(info: &PanicInfo) -> ! {
+    kernel::test_panic_handler(info)
 }
