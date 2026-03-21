@@ -14,6 +14,8 @@ use log::*;
 ///use crate::{println, serial_println};
 use bootloader_api::{BootloaderConfig,BootInfo};
 
+use crate::bga::{VBE_DISPI_INDEX_VIRT_WIDTH, bga_read_register};
+
 mod acpi;
 mod memory;
 //mod virtualization;
@@ -100,7 +102,8 @@ fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
                 let b = pixel[2];
                 let a = pixel[3];
                 let color = ((r as u32) << 16) | ((g as u32) << 8) | (b as u32);
-                let pitch = img_width * 4;
+                let virt_width = bga_read_register(VBE_DISPI_INDEX_VIRT_WIDTH) as u32;
+                let pitch = virt_width *4;
                 let offset = y*pitch/4+x;
                 if a > 0 {
                     //*framebuffer.add(dst_offset) = color;
