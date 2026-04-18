@@ -6,16 +6,16 @@ use x86_64::{
         FrameAllocator, Mapper, Page, PageTableFlags, Size4KiB, mapper::MapToError,
     },
 };
+use alloc::alloc::{GlobalAlloc,Layout};
 
 extern crate alloc;
-use core::alloc::Layout;
 
 pub const HEAP_START: usize = 0x_ffff_a000_0000_0000;
 pub const HEAP_SIZE: usize = 32 * 1024 * 1024;
 
 #[alloc_error_handler]
 fn alloc_error_handler(layout: Layout) -> ! {
-    error!("allocation error: {:?}", layout);
+    panic!("allocation error: {:?}", layout);
 
     loop {
         x86_64::instructions::hlt();
