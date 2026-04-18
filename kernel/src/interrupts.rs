@@ -1,8 +1,10 @@
 use log::{debug, warn};
+use spin::MutexGuard;
 use x86_64::structures::idt::{InterruptDescriptorTable, InterruptStackFrame, PageFaultErrorCode};
 
 use lazy_static::lazy_static;
 
+use crate::apic::LAPIC;
 use crate::{println, serial_println};
 
 #[derive(Debug, Clone, Copy)]
@@ -10,6 +12,7 @@ use crate::{println, serial_println};
 pub enum InterruptIndex {
     Timer = 32,
     Keyboard = 33,
+    Mouse = 44,
     LapicError = 51,
     Spurious = 0xff,
 }
@@ -133,6 +136,8 @@ lazy_static! {
         #[rustfmt::skip]
         idt[InterruptIndex::Keyboard.as_u8()].set_handler_fn(keyboard_interrupt_handler);
         #[rustfmt::skip]
+        idt[InterruptIndex::Mouse.as_u8()].set_handler_fn(mouse_interrupt_handler);
+        #[rustfmt::skip]
         idt[InterruptIndex::LapicError.as_u8()].set_handler_fn(lapic_error_handler);
         #[rustfmt::skip]
         idt[InterruptIndex::Spurious.as_u8()].set_handler_fn(spurious_interrupt_handler);
@@ -182,30 +187,115 @@ pub extern "x86-interrupt" fn breakpoint_handler(stack_frame: InterruptStackFram
     serial_println!("EXCEPTION: BREAKPOINT\n{:#?}", stack_frame);
 }
 
+use core::sync::atomic::{AtomicU64, Ordering};
+
+static TSC_COUNT: AtomicU64 = AtomicU64::new(0);
 pub extern "x86-interrupt" fn timer_interrupt_handler(_stack_frame: InterruptStackFrame) {
     use crate::apic::LAPIC;
 
     // EOI must be sent before context_switch, because the switch may not
     // return to this handler until this task is scheduled again.
+    let curr_tsc = TSC_COUNT.fetch_add(1, Ordering::Relaxed) + 1;
+    if curr_tsc % 100 == 0 {
+        println!("{} ticks!", curr_tsc);
+    }
+
     unsafe {
         #[allow(static_mut_refs)]
         LAPIC.get().unwrap().lock().end_interrupts();
     }
 
-    crate::scheduler::tick();
+    //crate::scheduler::tick();
 }
 
+use spin::Mutex;
+
 pub extern "x86-interrupt" fn keyboard_interrupt_handler(_stack_frame: InterruptStackFrame) {
+    use crate::{print, println};
+    use pc_keyboard::{DecodedKey, HandleControl, Keyboard, ScancodeSet1, layouts};
+    use spin::Mutex;
     use x86_64::instructions::port::Port;
 
-    use crate::apic::LAPIC;
+    lazy_static! {
+        static ref KEYBOARD: Mutex<Keyboard<layouts::Us104Key, ScancodeSet1>> =
+            Mutex::new(Keyboard::new(
+                ScancodeSet1::new(),
+                layouts::Us104Key,
+                HandleControl::Ignore
+            ));
+    }
 
+    let mut keyboard = KEYBOARD.lock();
     let mut port = Port::new(0x60);
     let scancode: u8 = unsafe { port.read() };
+    if let Ok(Some(key_event)) = keyboard.add_byte(scancode) {
+        if let Some(key) = keyboard.process_keyevent(key_event) {
+            match key {
+                DecodedKey::Unicode(character) => {
+                    print!("{}", character)
+                }
+                DecodedKey::RawKey(key) => {}
+            }
+        }
+    }
 
     warn!("Keyboard scancode: {}", scancode);
     if scancode == 28 {
         crate::acpi::shutdown();
+    }
+
+    unsafe {
+        #[allow(static_mut_refs)]
+        LAPIC.get().unwrap().lock().end_interrupts();
+    }
+}
+
+pub extern "x86-interrupt" fn mouse_interrupt_handler(_stack_frame: InterruptStackFrame) {
+    use spin::Mutex;
+    use x86_64::instructions::port::Port;
+    use crate::mouse;
+
+    // 使用静态变量收集 3 字节数据包
+    lazy_static! {
+        static ref PACKET: Mutex<([u8; 3], usize)> = Mutex::new(([0u8; 3], 0));
+    }
+
+    let mut port = Port::<u8>::new(0x60);
+    let byte: u8 = unsafe { port.read() };
+
+    // 忽略初始化期间鼠标返回的 ACK/BAT 字节
+    if byte == 0xFA || byte == 0xAA {
+        unsafe {
+            #[allow(static_mut_refs)]
+            LAPIC.get().unwrap().lock().end_interrupts();
+        }
+        return;
+    }
+
+    let mut guard = PACKET.lock();
+    let (ref mut data, ref mut index) = *guard;
+
+    // 首字节同步：mouse 数据包第一字节始终 bit3 = 1。
+    if *index == 0 && (byte & 0x08) == 0 {
+        // 非有效首字节，忽略当前字节以重新同步
+        unsafe {
+            #[allow(static_mut_refs)]
+            LAPIC.get().unwrap().lock().end_interrupts();
+        }
+        return;
+    }
+
+    data[*index] = byte;
+    *index += 1;
+
+    if *index == 3 {
+        // 把数据包交给 mouse 模块处理
+        mouse::handle_packet(*data);
+        
+        // 可根据需要打印调试信息
+        // crate::println!("mouse packet: {:02x?}", data);
+
+        *index = 0;
     }
 
     unsafe {
