@@ -31,9 +31,7 @@ pub struct LApic {
 impl IOApic {
     pub fn new(addr: u64) -> Self {
         Self {
-            addr: unsafe {
-                crate::memory::physical_to_virtual(PhysAddr::new(addr)).as_u64()
-            },
+            addr: unsafe { crate::memory::physical_to_virtual(PhysAddr::new(addr)).as_u64() },
             ioapic: None,
         }
     }
@@ -44,6 +42,18 @@ impl IOApic {
         debug!("IOAPIC initialized");
     }
 
+    pub fn enable_irq(&mut self, irq: u8, vector: u8, dest_lapic_id: u8) {
+        if let Some(ioapic) = self.ioapic.as_mut() {
+            let mut entry = RedirectionTableEntry::default();
+            entry.set_mode(IrqMode::Fixed);
+            entry.set_vector(vector);
+            entry.set_dest(dest_lapic_id);
+            unsafe {
+                ioapic.set_table_entry(irq, entry);
+                ioapic.enable_irq(irq);
+            }
+        }
+    }
     #[allow(clippy::missing_safety_doc)]
     pub unsafe fn enable(&mut self) {
         if let Some(ioapic) = self.ioapic.as_mut() {
@@ -68,9 +78,7 @@ impl IOApic {
 impl LApic {
     pub fn new(addr: u64) -> Self {
         Self {
-            addr: unsafe {
-                crate::memory::physical_to_virtual(PhysAddr::new(addr)).as_u64()
-            },
+            addr: unsafe { crate::memory::physical_to_virtual(PhysAddr::new(addr)).as_u64() },
             lapic: None,
         }
     }
@@ -138,10 +146,8 @@ pub fn init_lapic(lapic_addr: u64) {
 }
 
 pub fn init_ioapic(ioapic_addr: u64) {
-    IOAPIC.call_once(|| Mutex::new(alloc::vec![IOApic::new(ioapic_addr)]));
-
-    let mut ioapic_lock = IOAPIC.get().unwrap().lock();
-    ioapic_lock.push(IOApic::new(ioapic_addr));
+    IOAPIC.call_once(|| Mutex::new(Vec::new()));
+    IOAPIC.get().unwrap().lock().push(IOApic::new(ioapic_addr));
 }
 
 pub fn init(rsdp_addr: &u64) {
@@ -163,7 +169,9 @@ pub fn init(rsdp_addr: &u64) {
         unsafe {
             for ioapic in IOAPIC.get().unwrap().lock().iter_mut() {
                 ioapic.init();
-                ioapic.enable();
+                //ioapic.enable();
+                ioapic.enable_irq(1, 33, 0);
+                ioapic.enable_irq(12, 44, 0);
                 debug!("IO Enabled: {:?}", ioapic.get_ioapic());
             }
         }
